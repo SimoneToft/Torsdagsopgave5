@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object Main{
++ main()
++ int countLampsInBuilding(Building building)
++ boolean isNormal(Building building)
+
+}
+object Room{
+- int numberOfDoors
+- int numberOfLamps
+- int numberOfWindows
++ Room(int numberOfDoors, int numberOfLamps, int numberOfWindows)
+
+}
+object Building{
+- final ArrayList<Room> rooms
+- int numberOfBathrooms
+- int numberOfFloors
+- boolean isOfficeBuilding
++Building(ArrayList<Room> rooms, int numberOfBathrooms, int numberOfFloors, boolean isOfficeBuilding)
+}
+
+Main *-- Building
+Building *-- Room
+@enduml

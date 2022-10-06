@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object Main{
++ main()
+
+}
+object Car{
+- String make
+- String model
+- int year
+- String bodyStyle
+- Driver driver
++ Car (String make, String model, int year, String bodyStyle)
+- Driver getdriver()
+- setDriver(Driver driver)
++String toString()
+
+}
+object Driver{
+- String name
+- int age
++Driver(String name, int age)
++String toString()
+}
+
+Car *-- Driver
+Main *-- Car
+
+@enduml
